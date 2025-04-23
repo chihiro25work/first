@@ -1,0 +1,107 @@
+@charset 'utf-8';
+/* 全てに共通のスタイル */
+body {
+    margin: 0;
+    display: flex;
+    position: relative; /* 基準のボックス */
+    flex-direction: column; /* モバイルでは縦並び */
+    background-color: #e8ded4;
+    font-family: "Poppins", sans-serif, Arial, sans-serif; /* Google Fonts */
+    font-style: normal;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto; /* ボックス内に収まり切らない時 */
+}
+
+/* セクション共通 */
+.page-title h1 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* ヘッダーナビ */
+.sidebar {
+    width: 100%;
+    height: auto;
+    background: #f7451d;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed; /* bodyに対して固定 */
+    z-index: 10;
+}
+.header-nav ul {
+    display: flex; /* 横並び */
+    justify-content: center; /* 左右中央寄せ */
+    list-style: none;
+    flex-wrap: wrap; /* 折り返して表示 */
+    gap: 1.2rem; /* 項目の間 */
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav ul :hover {
+    /* ホバー時のスタイル */
+    background-color: #cd3917; /* 背景 */
+    color: #fff; /* 白文字 */
+    /* 他のスタイルも必要に応じて追加 */
+}
+.header-navlist a {
+    font-size: 0.8rem;
+    text-decoration: none; /* リンクの下線を消す */
+    color: black;
+}
+
+/* ===== PCレイアウト ===== */
+@media screen and (min-width: 1024px) {
+    body {
+        font-family: "Poppins", sans-serif;
+        height: 100vh; /* 高さを画面いっぱいに */
+        line-height: 1.8;
+    }
+
+    main {
+        text-align: center; /* メインコンテンツ全て中央寄せ */
+    }
+
+    .page-title h1 {
+        text-align: left;
+    }
+
+    .wrap {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    /* サイドバー（ヘッダーナビ） */
+    .sidebar {
+        width: 8vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #f7451d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        writing-mode: vertical-rl; /* ← 文字を縦書きにする */
+        text-orientation: upright;
+        z-index: 10;
+    }
+
+    .header-nav ul {
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 14px;
+        gap: 22px;
+    }
+
+    .header-navlist a {
+        letter-spacing: -0.15em;
+    }
+
+    /* フッター */
+    footer {
+        display: none;
+    }
+}

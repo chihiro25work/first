@@ -1,0 +1,194 @@
+@charset 'utf-8';
+
+/* メインコンテンツ */
+main {
+    width: 100%;
+}
+/* キービジュアル */
+.KV {
+    width: 100%;
+    height: auto;
+}
+.KV img {
+    width: 100%;
+}
+
+/* 名前・テキスト */
+/* トップ左側コンテンツ */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px; /* 必要に応じて調整 */
+    width: 100%;
+    background-color: #e8ded4; /* 背景色 */
+}
+
+/* 文字を中央に */
+.intro-inner {
+    max-width: 600px; /* テキストの幅を調整 */
+}
+/* h1(名前)のスタイル */
+.intro-inner h1 {
+    font-weight: 500;
+    font-size: 30px;
+    color: #000;
+}
+/* pのスタイル */
+.intro-inner p {
+    font-weight: 300;
+    font-size: 14px;
+    color: #000;
+    letter-spacing: 1px;
+}
+/* 右側コンテンツ */
+/* 基準のボックス */
+.about,
+.products,
+.others {
+    position: relative; /* 親要素を基準に配置 */
+    display: inline-block; /* コンテンツ幅に合わせる */
+}
+.about img,
+.products img,
+.others img {
+    /* display: block; 余白をなくす */
+    width: 100%; /* 必要に応じて調整 */
+    height: auto;
+}
+/* 各タイトルを右下に絶対配置 */
+.about h2,
+.products h2,
+.others h2 {
+    position: absolute; /* 画像の上に配置 */
+    bottom: 10px; /* 下からの距離 */
+    right: 10px; /* 右からの距離 */
+    /* background: rgba(0, 0, 0, 0.6); 背景を半透明にして見やすく */
+    color: white; /* 文字色を白に */
+    padding: 5px 10px; /* 余白を追加 */
+    font-size: 18px;
+}
+/* ホバーしたら黒く */
+.about {
+    background: #111;
+}
+.about :hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.products {
+    background: #111;
+}
+.products :hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.others {
+    background: #111;
+}
+.others :hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+/* コンタクトの基準のボックス */
+.contact {
+    position: relative; /* 親要素を基準にする */
+    width: 100%; /* 必要に応じて調整 */
+    height: 125px; /* 指定の高さ */
+    background-color: #f4f4f4; /* 背景色（お好みで変更） */
+    display: flex; /* 中央配置のために flexbox を使用 */
+    justify-content: center; /* 横方向の中央揃え */
+    align-items: center; /* 縦方向の中央揃え */
+}
+.contact a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #000; /* お好みの色に */
+}
+
+.contact h2 {
+    position: absolute; /* ボックス内の右下に配置 */
+    bottom: 10px; /* 下端から10pxの位置 */
+    right: 10px; /* 右端から10pxの位置 */
+    color: white; /* 文字色 */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    padding: 5px 10px; /* 余白 */
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background: white;
+    text-align: center;
+}
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+.footer-inner a {
+    text-decoration: none;
+    color: black;
+}
+.copy {
+    font-size: 10px;
+}
+
+/* ===== デスクトップレイアウト用 ===== */
+@media screen and (min-width: 768px) {
+    body {
+        flex-direction: row; /* 左右分割レイアウト */
+        height: 100vh; /* 高さを画面いっぱいに */
+        overflow: hidden; /* 横スクロール防止 */
+    }
+
+    /* 画面左側の固定コンテンツ */
+    .intro {
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .intro-inner h1 {
+        text-align: left;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+    .intro-inner p {
+        text-align: left;
+    }
+
+    /* メインコンテンツ（スクロール可能） */
+    main {
+        width: 50%;
+        margin-left: 50%;
+        /* height: 100vh; */
+        overflow-y: scroll;
+        box-sizing: content-box;
+        background-color: #fff;
+    }
+
+    /* 各セクション幅を統一 */
+    .KV img,
+    .about img,
+    .products img,
+    .others img {
+        max-width: 100%;
+        height: 100%;
+    }
+
+    /* フッター */
+    /* footer {
+        display: none;
+    } */
+}
