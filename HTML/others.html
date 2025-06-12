@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>OTHERSPAGE</title>
+
+        <!-- Gフォントの読み込み -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="../CSS/destyle.css" />
+        <link rel="stylesheet" href="../CSS/common.css" />
+        <link rel="stylesheet" href="../CSS/others.css" />
+    </head>
+
+    <body>
+        <div class="wrap">
+            <header>
+                <div class="sidebar">
+                    <nav class="header-nav">
+                        <ul>
+                            <li class="header-navlist"><a href="../index.html">TOP</a></li>
+                            <li class="header-navlist"><a href="./about.html">ABOUT</a></li>
+                            <li class="header-navlist"><a href="./productslist.html">PRODUCTS</a></li>
+                            <li class="header-navlist"><a href="#">OTHERS</a></li>
+                            <li class="header-navlist"><a href="mailto:chihiro2500nn@gmail.com">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- ヘッダー -->
+            <main>
+                <section class="page-title">
+                    <h1>OTHERS</h1>
+                </section>
+                <section class="main-contents">
+                <div class="container">
+                    <div class="image-container">
+                        <img src="../img/car.jpg" alt="車の画像" />
+                        <div class="caption">愛車のvolvo240wagonは1993年製。</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/quilt.jpg" alt="キルトの画像" />
+                        <div class="caption">486枚の三角形を繋げて、ベットカバーを作成。コツコツ作業を続け、1年ちょっとで完成。</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/wine.jpg" alt="ワインの画像" />
+                        <div class="caption">ご飯に合うおいしいお酒があることを知ってから、ワインや日本酒が好きに。</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/baseball.jpg" alt="WBCの画像" />
+                        <div class="caption">球場で応援歌を聞きながら飲むビールは最高。2023年のWBC観戦で見ることができた大谷選手のHRは一生の思い出。</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/EU.jpg" alt="ヨーロッパ旅行の画像" />
+                        <div class="caption">旅先ではその土地ならではの景色や食事を楽しむ。母と祖母と訪れたスロバキア。</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/thai.jpg" alt="タイ旅行の画像" />
+                        <div class="caption">初めてのひとり旅でタイのバンコクへ。</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/ohtani.jpg" alt="大谷選手" />
+                        <div class="caption">ドジャースタジアムで観戦。山本選手の登板と大谷選手のHRを見ることができました。</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/meat.jpg" alt="焼肉の画像" />
+                        <div class="caption">地元の焼肉屋さんはほぼ制覇。東京に住んでいた頃に出会った焼肉屋さんは何度行っても衝撃的。</div>
+                    </div>
+                    </section>
+                </div>
+            </main>
+            <!-- メインコンテンツ -->
+            <footer>
+                <div class="footer-inner">
+                    <nav class="footer-nav">
+                        <ul>
+                            <li><a href="../index.html">TOP</a></li>
+                            <li><a href="./about.html">ABOUT</a></li>
+                            <li><a href="./productslist.html">PRODUCTS</a></li>
+                            <li><a href="#">OTHERS</a></li>
+                            <li><a href="mailto:chihiro2500nn@gmail.com">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                    <p class="copy">Copyright © NARUKAWA CHIHIRO All Rights Reserved.</p>
+                </div>
+            </footer>
+            <!-- フッター -->
+        </div>
+        <script>document.addEventListener("DOMContentLoaded", function () {
+    const containers = document.querySelectorAll('.image-container');
+
+    containers.forEach(container => {
+    container.addEventListener('click', function () {
+        // スマホ（1024px以下）のときだけ処理
+        if (window.innerWidth < 1024) {
+        this.classList.toggle('active');
+        }
+    });
+    });
+});
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRODUCTS LIST</title>
+
+    <!-- Gフォントの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../CSS/destyle.css" />
+    <link rel="stylesheet" href="../CSS/common.css" />
+    <link rel="stylesheet" href="../CSS/productslist.css" />
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="sidebar">
+                <nav class="header-nav">
+                    <ul>
+                        <li class="header-navlist"><a href="../index.html">TOP</a></li>
+                        <li class="header-navlist"><a href="./about.html">ABOUT</a></li>
+                        <li class="header-navlist"><a href="#">PRODUCTS</a></li>
+                        <li class="header-navlist"><a href="./others.html">OTHERS</a></li>
+                        <li class="header-navlist"><a href="mailto:chihiro2500nn@gmail.com">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- ヘッダー -->
+        <main>
+            <section class="page-title">
+                <h1>PRODUCTS LIST</h1>
+            </section>
+
+            <section class="main-contents">
+                <div class="container">
+                    <div class="product-container">
+                        <a href="../HTML/products1.html">
+                            <img src="../img/firsttop.png" alt="制作物のイメージ" />
+                            <div class="product-title">鳴川ちひろのポートフォリオサイト①</div>
+                        </a>
+                    </div>
+
+                    <div class="product-container">
+                        <a href="../HTML/products2.html">
+                            <img src="../img/portfolio2top.png" alt="制作物のイメージ" />
+                            <div class="product-title">鳴川ちひろのポートフォリオサイト②</div>
+                        </a>
+                    </div>
+
+                    <div class="product-container">
+                        <a href="../HTML/products3.html">
+                            <img src="../img/duckling.png" alt="制作物のイメージ" />
+                            <div class="product-title">キルトサロンダックリンの生徒募集バナー</div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+    </div>
+    </main>
+    <!-- メインコンテンツ -->
+    <footer>
+        <div class="footer-inner">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html">TOP</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="#">PRODUCTS</a></li>
+                    <li><a href="./others.html">OTHERS</a></li>
+                    <li><a href="mailto:chihiro2500nn@gmail.com">CONTACT</a></li>
+                </ul>
+            </nav>
+            <p class="copy">Copyright © NARUKAWA CHIHIRO All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- フッター -->
+    </div>
+    <script>document.addEventListener("DOMContentLoaded", function () {
+            const containers = document.querySelectorAll('.image-container');
+
+            containers.forEach(container => {
+                container.addEventListener('click', function () {
+                    // スマホ（1024px以下）のときだけ処理
+                    if (window.innerWidth < 1024) {
+                        this.classList.toggle('active');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

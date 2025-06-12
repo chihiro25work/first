@@ -1,0 +1,157 @@
+@charset 'utf-8';
+body {
+    line-height: 1.8; /* 行の高さ */
+}
+.page-title {
+    margin-top: 70px;
+}
+
+section {
+    max-width: 700px;
+    margin-top: 30px;
+    padding: 0 25px;
+}
+
+/* ABOUT */
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    width: 180px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.profile h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.profile span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.profile p {
+    font-size: 15px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* STRENGTHS */
+
+.strength {
+    margin-bottom: 35px;
+}
+.strengths h2 {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    margin-bottom: 30px;
+}
+
+.strength h3 {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.strength p {
+    font-size: 15px;
+    margin: 0;
+}
+
+.strength-img {
+    display: none;
+}
+
+/* フッター */
+footer {
+    margin-top: 80px;
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+/* ========== PCレイアウト ========== */
+@media screen and (min-width: 1024px) {
+    body {
+        padding-left: 100px; /* ←サイドバーの幅に合わせて調整 */
+    }
+
+    section {
+        max-width: 1100px;
+        margin: 80px;
+        padding: 0 40px;
+    }
+    /* プロフィール部分の横並び */
+    .profile {
+        display: flex;
+        gap: 50px;
+    }
+    .profile img {
+        max-width: 280px;
+        width: 100%;
+        height: auto;
+        border-radius: 8px; /* 角丸 */
+    }
+
+    .profile-text {
+        max-width: 600px;
+    }
+
+    .profile-text h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .profile-text span {
+        display: block;
+        font-size: 14px;
+        margin-top: 4px;
+    }
+
+    /* STRENGTHS セクション */
+    .strength {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+        margin-top: 100px;
+        margin-bottom: 60px;
+    }
+    .strengths h2 {
+        text-align: left;
+    }
+    .strength h3 {
+        min-width: 160px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .strength p {
+        flex: 1;
+        text-align: left;
+    }
+}

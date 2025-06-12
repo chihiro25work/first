@@ -1,0 +1,100 @@
+@charset 'utf-8';
+
+/* デフォルト：スマホ（モバイルファースト） */
+.page-title {
+    margin-top: 70px;
+}
+section {
+    /* max-width: 700px; */
+    margin-top: 30px;
+    padding: 0 25px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px;
+}
+
+.image-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+/* 説明文：スマホでは最初は非表示 */
+.caption {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.375);
+    color: #f5f5f5;
+    padding: 8px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* スマホ：クリックで表示 */
+.image-container.active .caption {
+    display: block;
+}
+
+/* フッター */
+footer {
+    margin-top: 80px;
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+/* ========== PCレイアウト（1024px以上） ========== */
+@media screen and (min-width: 1024px) {
+    body {
+        padding-left: 100px; /* ←サイドバーの幅に合わせて調整 */
+    }
+
+    .main-contents {
+        margin: 80px;
+        padding: 0 40px;
+    }
+
+    .page-title {
+        padding-left: 120px;
+    }
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* ホバーで説明文表示 */
+    .image-container:hover .caption {
+        display: block;
+    }
+
+    /* PCではクリックでの表示は不要なので無効化 */
+    .image-container.active .caption {
+        display: none;
+    }
+}

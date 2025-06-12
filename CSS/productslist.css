@@ -1,0 +1,83 @@
+@charset 'utf-8';
+
+/* デフォルト：スマホ（モバイルファースト） */
+.page-title {
+  margin-top: 70px;
+}
+section {
+  /* max-width: 700px; */
+  margin-top: 30px;
+  padding: 0 25px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* 要素間に余白を持たせる */
+  padding: 10px;
+}
+
+.product-container {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.product-container img {
+  width: 100%;
+  display: block;
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  padding-top: 1rem;
+}
+
+/* フッター */
+footer {
+  margin-top: 80px;
+  background-color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+/* ========== PCレイアウト（1024px以上） ========== */
+@media screen and (min-width: 1024px) {
+  body {
+    padding-left: 100px; /* ←サイドバーの幅に合わせて調整 */
+  }
+
+  .main-contents {
+    margin: 80px;
+    padding: 0 40px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .page-title {
+    padding-left: 120px;
+  }
+}
